@@ -21,6 +21,8 @@ before_install:
 install: composer update --prefer-dist --no-interaction $COMPOSER_FLAGS
 
 script:
+  - php bin/console doctrine:database:create
+  - php bin/console hautelook:fixtures:load
   - ./vendor/bin/simple-phpunit
   - ./vendor/bin/phpstan analyse src
   - ./vendor/bin/ecs check src
