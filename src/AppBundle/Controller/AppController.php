@@ -13,7 +13,6 @@ class AppController extends Controller
      */
     public function indexAction() : Response
     {
-        return $this->render('app/index.html.twig', [
-        ]);
+        return $this->render('app/index.html.twig', []);
     }
 }
