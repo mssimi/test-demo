@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
 use AppBundle\Form\ContactType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -36,6 +37,18 @@ class AppController extends Controller
 
         return $this->render('app/contact.html.twig', [
            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * @Route("/product/{slug}", name="product")
+     * @param Product $product
+     * @return Response
+     */
+    public function productAction(Product $product): Response
+    {
+        return $this->render('app/product.html.twig', [
+           'product' => $product
         ]);
     }
 }

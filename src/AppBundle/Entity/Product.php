@@ -55,7 +55,7 @@ class Product
      *
      * @return int
      */
-    public function getId()
+    public function getId(): ?int
     {
         return $this->id;
     }
@@ -65,13 +65,10 @@ class Product
      *
      * @param string $name
      *
-     * @return Product
      */
-    public function setName($name)
+    public function setName($name): void
     {
         $this->name = $name;
-
-        return $this;
     }
 
     /**
@@ -79,7 +76,7 @@ class Product
      *
      * @return string
      */
-    public function getName()
+    public function getName(): ?string
     {
         return $this->name;
     }
@@ -89,13 +86,10 @@ class Product
      *
      * @param string $slug
      *
-     * @return Product
      */
-    public function setSlug($slug)
+    public function setSlug($slug): void
     {
         $this->slug = $slug;
-
-        return $this;
     }
 
     /**
@@ -103,7 +97,7 @@ class Product
      *
      * @return string
      */
-    public function getSlug()
+    public function getSlug(): ?string
     {
         return $this->slug;
     }
@@ -113,13 +107,10 @@ class Product
      *
      * @param string $description
      *
-     * @return Product
      */
-    public function setDescription($description)
+    public function setDescription($description): void
     {
         $this->description = $description;
-
-        return $this;
     }
 
     /**
@@ -127,7 +118,7 @@ class Product
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -137,13 +128,10 @@ class Product
      *
      * @param string $price
      *
-     * @return Product
      */
-    public function setPrice($price)
+    public function setPrice($price): void
     {
         $this->price = $price;
-
-        return $this;
     }
 
     /**
@@ -151,7 +139,7 @@ class Product
      *
      * @return string
      */
-    public function getPrice()
+    public function getPrice(): ?string
     {
         return $this->price;
     }

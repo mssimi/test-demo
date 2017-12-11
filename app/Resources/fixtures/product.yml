@@ -1,0 +1,6 @@
+AppBundle\Entity\Product:
+  product_0:
+    name: okurka
+    slug: okurka
+    description: lorem ipsum
+    price: 200

@@ -15,7 +15,7 @@ class AppControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
 
-    public function testContact()
+    public function testContact() : void
     {
         $client = static::createClient();
         $client->followRedirects();
@@ -35,5 +35,16 @@ class AppControllerTest extends WebTestCase
 
         $crawler = $client->submit($form);
         $this->assertEquals('Question send!', trim($crawler->filter('.alert-success')->text()));
+    }
+
+    public function testProduct() : void
+    {
+        $client = static::createClient();
+
+        $crawler = $client->request('GET','/product/okurka');
+
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+
+        $this->assertEquals('okurka', trim($crawler->filter('h1')->text()));
     }
 }
